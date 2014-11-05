@@ -5,16 +5,16 @@ body {
 
 .page-wrapper {
   margin: 0 auto;
-  width: 400px;
+  max-width: 400px;
 }
 
 header {
   margin: 2em auto;
-  width: 20em;
+  width: 80%;
 }
 
 .logo {
-  width: 20em;
+  width: 100%;
 }
 
 section {
@@ -24,7 +24,7 @@ section {
 .form-wrapper {
     /* Just to center the form on the page */
   margin: 2em auto;
-  width: 400px;
+  width: 100%;
   padding: 0.5em;
   border: 1px solid #CCC;
   background-color: #FFFFFF;
@@ -41,7 +41,7 @@ form div + div {
 input, 
 textarea {
   font: 1em sans-serif;
-  width: 400px;
+  width: 100%;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: 1px solid #999;
