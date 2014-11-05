@@ -47,3 +47,7 @@ textarea {
     It does not work on every browsers */
   resize: vertical;
 }
+
+button {
+  height: 30px;
+}
