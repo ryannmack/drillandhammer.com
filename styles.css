@@ -1,0 +1,44 @@
+.page-wrapper {
+  margin: 0 auto;
+  width: 800px;
+}
+
+section {
+  text-align: center;
+}
+
+.form-wrapper {
+    /* Just to center the form on the page */
+  margin: 0 auto;
+  width: 400px;
+  padding: 0.5em;
+  border: 1px solid #CCC;
+}
+
+.form-wrapper h3 {
+  margin: 0 0 1em 0;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+input, 
+textarea {
+  font: 1em sans-serif;
+  width: 400px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  padding: 5px;
+  margin-top: 0.5em;
+}
+
+textarea {
+  /* To give enough room to type some text */
+  height: 5em;
+
+  /* To allow users to resize any textarea vertically
+    It does not work on every browsers */
+  resize: vertical;
+}
