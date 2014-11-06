@@ -1,6 +1,7 @@
 body {
   background-image: url("images/background-pattern.png");
   background-repeat: repeat;
+  margin: 0;
 }
 
 .page-wrapper {
@@ -9,12 +10,14 @@ body {
 }
 
 header {
-  margin: 2em auto;
-  width: 80%;
+  margin: 0 auto;
+  width: 40%;
+  border-top: 40px solid #2D0F0B;
 }
 
 .logo {
   width: 100%;
+  padding: 2em 0;
 }
 
 section {
@@ -26,8 +29,8 @@ section {
   margin: 2em auto;
   max-width: 400px;
   padding: 0.5em;
-  border: 1px solid #CCC;
-  background-color: #FFFFFF;
+  border: 2px solid #2D0F0B;
+  /* background-color: #FAF4E4; */
 }
 
 .form-wrapper h3 {
@@ -47,6 +50,7 @@ textarea {
   border: 1px solid #999;
   padding: 5px;
   margin-top: 0.5em;
+  border: 4px solid #2D0F0B;
 }
 
 textarea {
@@ -59,7 +63,14 @@ textarea {
 }
 
 button {
-  height: 30px;
+  height: 2em;
+  width: 100%;
+  background-color: #DF7228;
+  border: none;
+  font-family: 'Aller', sans-serif;
+  font-weight: bolder;
+  font-style: normal;
+  font-size: 1.25em;
 }
 
 @font-face {
@@ -103,3 +114,30 @@ label {
   font-style: normal;
   font-size: 1em;
 }
+
+a:link { 
+  color: #DF7228;
+  text-decoration: none;
+}
+
+a:visited { 
+  color: #DF7228;
+}
+
+a:hover { 
+  color: #9E4D1D; 
+}
+
+a:active { 
+  color: #9E4D1D; 
+} 
+
+button:hover { 
+  background-color: #9E4D1D;
+  color: #FBF4E3; 
+}
+
+button:active { 
+  background-color: #9E4D1D;
+  color: #FBF4E3; 
+} 
