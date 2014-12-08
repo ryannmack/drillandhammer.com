@@ -19,15 +19,7 @@
 
       ga('create', 'UA-56479508-1', 'auto');
       ga('send', 'pageview');
-    </script>
 
-    <script>
-      function sendMail(){
-        var link = "mailto:donald@drillandhammer.com"
-          + "?subject=" + escape("Request For Quote")
-          + "&body=" + escape(document.getElementById('msg').value);
-        window.location.href = link;
-      }
     </script>
     
   </head>
@@ -58,17 +50,39 @@
 
       <div class="form-wrapper">
         <h3>Request a Quote</h3>
-        <form action="" method="post">
+        <form action="https://getsimpleform.com/messages?form_api_token=52d91045823f8ec366629b740eaf0eef" method="post">
+        
+        <input type='hidden' name='redirect_to' value='http://drillandhammer.com?success=true' />
+
           <div>
-            <label for="msg">Describe the work you would like a quote for.</label> <br>
-            <textarea id="msg"></textarea>
+            <label for="name">Name</label> <br>
+            <input type="text" id="name" />            
+          </div>
+          <div>
+            <label for="mail">Email</label> <br>
+            <input type="email" id="mail" />
+          </div>
+          <div>
+            <label for="message">Describe the work you would like a quote for.</label> <br>
+            <textarea id="message"></textarea>
           </div>
           <div class="button">
-            <button type="submit" onclick="sendMail();return false">Submit</button>
+            <button type="submit" id="submit-button">Submit</button>
           </div>
         </form>
       </div>
     </div>
 
-
+    <script type="text/javascript">
+      function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+      if (getParameterByName('success') === "true") {
+        button = document.getElementById("submit-button");
+        button.textContent = "Success!"
+      }
+    </script>
   </body>
