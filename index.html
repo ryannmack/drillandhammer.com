@@ -19,7 +19,15 @@
 
       ga('create', 'UA-56479508-1', 'auto');
       ga('send', 'pageview');
+    </script>
 
+    <script>
+      function sendMail(){
+        var link = "mailto:donald@drillandhammer.com"
+          + "?subject=" + escape("Request For Quote")
+          + "&body=" + escape(document.getElementById('msg').value);
+        window.location.href = link;
+      }
     </script>
     
   </head>
@@ -52,19 +60,11 @@
         <h3>Request a Quote</h3>
         <form action="" method="post">
           <div>
-            <label for="name">Name</label> <br>
-            <input type="text" id="name" />            
-          </div>
-          <div>
-            <label for="mail">Email</label> <br>
-            <input type="email" id="mail" />
-          </div>
-          <div>
             <label for="msg">Describe the work you would like a quote for.</label> <br>
             <textarea id="msg"></textarea>
           </div>
           <div class="button">
-            <button type="submit">Submit</button>
+            <button type="submit" onclick="sendMail();return false">Submit</button>
           </div>
         </form>
       </div>
